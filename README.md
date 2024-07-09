@@ -1,7 +1,9 @@
-# Vue 3 + Vite
-
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+# review408
+## 一个用于复习计算机考研统考专业课408中需要经常复习的题目的平台。
+## 支持ocr识别题目和手动输入导入两种
+## 支持选择题和填空题
+## 支持修改已导入的题目的相关内容
+## 支持添加题目解析（备注）
+## 支持标记熟知，该题目会在接下来的10-20天随机安排复习
+## 每日自动根据前段时间复习情况安排对应的题目复习
+## [点此体验(https://408.nysxzs.top/)
