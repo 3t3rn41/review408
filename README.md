@@ -1,10 +1,8 @@
 # review408
 
 <p align="center">
-  <a href="https://408.nysxzs.top/">
-    <img src="https://nysxzs.top/review408Index.png" width="450"></a>
-  <a href="https://408.nysxzs.top/">
-    <img src="https://nysxzs.top/review408Insert.png" width="450"></a>
+    <img src="https://nysxzs.top/review408Index.png" width="450">
+    <img src="https://nysxzs.top/review408Insert.png" width="450">
 </p>
 
 ## 关于本平台
