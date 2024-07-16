@@ -117,8 +117,7 @@ public class ReviewServiceImpl implements ReviewService{
     @Transactional
     public Integer insertReview(String subject,String question,String answer,Integer optionType,String optionA,String optionB,String optionC,String optionD,String explain,String username)
     {
-        if (subject.isEmpty() || question.isEmpty() || answer.isEmpty() || optionType == null ||
-                optionA.isEmpty() || optionB.isEmpty() || optionC.isEmpty() || optionD.isEmpty() || explain.isEmpty()) {
+        if (subject.isEmpty() || question.isEmpty() || answer.isEmpty() || optionType == null){
             return 0;
         }
         return reviewDao.insertReview(subject,badWordsFilter(question),badWordsFilter(answer),optionType,badWordsFilter(optionA),
@@ -128,11 +127,10 @@ public class ReviewServiceImpl implements ReviewService{
     @Transactional
     public Integer updateReview(Integer id,String subject,String question,String answer,Integer optionType,String optionA,String optionB,String optionC,String optionD,String explain,String username)
     {
-//        if (id == null || subject.isEmpty() || question.isEmpty() || answer.isEmpty() || optionType == null ||
-//                optionA.isEmpty() || optionB.isEmpty() || optionC.isEmpty() || optionD.isEmpty() || explain.isEmpty()) {
-//            return 0;
-//        }
-        return reviewDao.insertReview(subject,badWordsFilter(question),badWordsFilter(answer),optionType,badWordsFilter(optionA),
+        if (subject.isEmpty() || question.isEmpty() || answer.isEmpty() || optionType == null){
+            return 0;
+        }
+        return reviewDao.updateReview(id,subject,badWordsFilter(question),badWordsFilter(answer),optionType,badWordsFilter(optionA),
                 badWordsFilter(optionB),badWordsFilter(optionC),badWordsFilter(optionD),badWordsFilter(explain),username);
     }
     @Override
@@ -184,7 +182,7 @@ public class ReviewServiceImpl implements ReviewService{
     {
         String newText=text;
         int flag=0;
-        String[] wordsToFilter={"要过滤的词汇"};
+        String[] wordsToFilter={"yourWords"};
         for (String s : wordsToFilter) {
             if (text.contains(s)) {
                 newText = newText.replaceAll(s, "***");
